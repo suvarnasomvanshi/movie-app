@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-//import { CgProfile } from "react-icons/cg";
 import style from "./Register.module.css";
 import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
@@ -12,7 +11,10 @@ const Register = ({ button }) => {
   const [lastName, setLastName] = useState();
   const [password, setPassword] = useState();
   const [confirmpassword, setConfirmPassword] = useState();
-  //const[search,setSearch]=useState("")
+  
+
+  //this is a dialogbox which show by clicking on user icon on ui.
+  //getting props(button) from header in this dialog box.
 
   function handleClose() {
     setOpen(false);
@@ -36,7 +38,7 @@ const Register = ({ button }) => {
     setConfirmPassword(e.target.value);
   }
 
-  //make one object addData,add all form data inside object,stord inside localstorage
+  //making one object addData,add all form data inside object,& stord inside localstorage.
   function handleSubmit() {
     const addData = {
       userName,

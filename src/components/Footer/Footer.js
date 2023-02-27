@@ -6,6 +6,7 @@ import {BsInstagram} from "react-icons/bs"
 import {AiOutlineMail} from "react-icons/ai"
 
 //footer of movie app
+
 function Footer(){
     return(
         <>

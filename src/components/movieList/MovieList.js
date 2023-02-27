@@ -7,16 +7,14 @@ function MovieList() {
   const [movieList, setMovieList] = useState([]);
   const { type } = useParams();
 
-  //useEffect(()=>{
-  //    getData()
-  //},[]);
 
   useEffect(() => {
     getData();
   }, [type]);
   
   //useParam search that type on url 
-  //get value of "type" from useParams which access value from url & fetch data for that type .
+  //useParams which gives detail for that specific "type" from url & fetch data for that type .
+
   const getData = () => {
     fetch(
       `https://api.themoviedb.org/3/movie/${type ? type : "popular"}?api_key=4e44d9029b1270a757cddc766a1bcb63&language=en-US`

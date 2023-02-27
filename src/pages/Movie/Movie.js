@@ -11,10 +11,9 @@ const Movie=()=>{
 
     useEffect(()=>{
         getData()
-       // window.scrollTo(0,0)
     },[])
 
-         //by clicking on single movie on ui, it fetch data using that specific id inside getdata
+//by clicking on single movie on ui, it fetch data using that specific id inside getdata
         const getData=()=>{
          fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=4e44d9029b1270a757cddc766a1bcb63&language=en-US`)
           .then(res => res.json())
@@ -22,7 +21,7 @@ const Movie=()=>{
      
           console.log(movie)
          
-         //by clicking add to favourite movie option, add that movie data inside localstorage,by event handlefav
+//by clicking add to favourite movie option on ui, add that movie data inside localstorage,by event handlefav
       const handleFav=()=>{
             setFavMovie([...favMovie,movie]);
           }

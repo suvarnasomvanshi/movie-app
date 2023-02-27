@@ -2,11 +2,10 @@ import React, { useState } from "react";
 import Style from "./FavouriteMovies.module.css";
 
 
-// //get "favuritemovie" from localstorage  and show on ui inside favourite icon section
+ //get "favuritemovie" from localstorage  and show on ui inside favourite icon section
 function FavouriteMovies() {
   const [favMoviedata,setFavMoviedata]=useState(JSON.parse(localStorage.getItem("favouriteMovie"))|| [])
-//const storedData = 
-  //console.log(storedData[0].runtime)
+
 
  return (
   <>

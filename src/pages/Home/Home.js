@@ -12,7 +12,7 @@ function Home() {
   const[search,setSearch]=useState("");
 
   
-   //fetch all popular movies using api stored in popular useState show on ui using map method
+   //fetch all popular movies using api stored in popular useState(show on ui in home page) using map method.
   useEffect(() => {
    fetch(
       "https://api.themoviedb.org/3/movie/popular?api_key=4e44d9029b1270a757cddc766a1bcb63&language=en-US"
@@ -21,12 +21,6 @@ function Home() {
       .then((data) => setPopular(data.results));
   }, []);
   
-   
-   //for search movie 
-   //function handleSearch(){
-   //setSearch(search)
-  //}
-  //console.log(inputMovie)
 
 
   return (
@@ -91,20 +85,3 @@ function Home() {
 export default Home;
 
 
-/*
-    <span className={Style.search}>
-      
-      <FaSearch
-        style={{
-          color: "white",
-          marginLeft: "13vw",
-          marginRight: "-1vw",
-          marginTop: "6vh",
-          height: "2.5vh",
-          width: "3vw",
-        }}
-        onClick={handleSearch}
-     
-        
-      />
-    </span>*/

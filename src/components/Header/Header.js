@@ -31,6 +31,7 @@ function Header() {
           <span>TOP RATED</span>
         </Link>
         
+        
         <Link to="/favouritemovies">
          <AiFillHeart
           style={{

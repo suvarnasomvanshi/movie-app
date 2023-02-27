@@ -1,10 +1,19 @@
-# Getting Started with Create React App
+# project name 
+ movie application
+
+ ### project description
+  project is done by using fetching APIs and show on ui .
+  Also it has search functionallty to search movie.
+  It has functionallty to add movie inside favourite movie.
+  also it option to add user name .
+  At the last it contain footer.
+
+  # Getting Started with Create React App
     npx create-react-app movie-app
 
 
 ## `npm i`
- In the project directory, you can install:
-
+ In the project directory,install:
 #### npm i react-router-dom
 #### npm i react-icons
 #### npm install @mui/material @emotion/react @emotion/styled
@@ -17,11 +26,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more 
-information.
 
 ### `npm run build`
 

@@ -1,0 +1,78 @@
+.rmain{
+    background: #242525cf;
+}
+.btnNext{
+    width: 2vw;
+    height: 3.9vh;
+    margin-left: 90vw;
+    margin-top: -3vh;
+
+}
+.btnNext:hover{
+    background: #fff9f9;
+}
+.dialog1{
+    font-weight: 500;
+    font-size: 4vh;
+    margin-left: 5vw;
+    text-decoration-color: blue;
+    border-radius: 10px;
+    
+
+}
+.dialoginput{
+    width: 25vw;
+    height: 4vh;
+    font-size: 2vh;
+    margin-top: 2vh;
+    padding: 1vw,1vw,1vw,1vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    border-radius: 2px;
+    color:black;
+
+
+}
+
+.btn{
+    width: 7vw;
+    height: 4vh;
+    font-size: 1.8vw;
+
+}
+.username{
+    display: flex;
+    margin-left: 93vw;
+    margin-top: -4vh;
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+@media (max-width:480){
+    .dialog1{
+        font-weight: 500;
+        font-size: 4vh;
+        margin-left: 5vw;
+        text-decoration-color: blue;
+        border-radius: 10px;
+        
+    
+    }
+        .btn{
+        width: 9vw;
+        height: 1vh;
+        font-size: 1.8vw;
+    
+    }
+       .username{
+        display: flex;
+        margin-left: 93vw;
+        margin-top: -4vh;
+        color: aliceblue;
+        font-family: Arial, Helvetica, sans-serif;
+    
+    }
+    
+}

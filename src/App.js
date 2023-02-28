@@ -14,10 +14,15 @@ function App() {
         <Header className="appheader"/>
         <Routes>
           <Route index path="/" element={<Home />}></Route>
+
           <Route path="/favouritemovies" element={<FavouriteMovies/>}></Route>
-          <Route path="movie/:id" element={<Movie />}></Route>
-          {/*type= popular,upcoming,top-rated*/}
+
+          {/*it is a dynamic routing ,if i provide any path after "movies/" it shows element "MovieList"*/}
           <Route path="movies/:type" element={<MovieList />}></Route>
+
+          {/*it is a dynamic routing ,if i provide any path after "movie/"it shows element "Movie"*/}
+          <Route path="movie/:id" element={<Movie />}></Route>
+
           <Route path="/*" element={<h1>errore page</h1>}></Route>
         </Routes>
       </Router>

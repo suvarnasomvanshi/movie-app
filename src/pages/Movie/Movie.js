@@ -7,13 +7,15 @@ import {AiFillHeart} from "react-icons/ai"
 const Movie=()=>{
     const [movie,setMovie]=useState();
     const [favMovie,setFavMovie]=useState(JSON.parse(localStorage.getItem("favouriteMovie"))|| []);
+
+     //get value  of dynmically created params (id) from url which is after "movie/"
     const {id} =useParams();
 
     useEffect(()=>{
         getData()
     },[])
 
-//by clicking on single movie on ui, it fetch data using that specific id inside getdata
+//by clicking on single movie on ui, it fetch data using that "specific id" inside getdata
         const getData=()=>{
          fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=4e44d9029b1270a757cddc766a1bcb63&language=en-US`)
           .then(res => res.json())
@@ -41,10 +43,22 @@ const Movie=()=>{
               
           <div>
             <div className={Style.moviename}>{movie?movie.original_tittle :""}</div> 
-            <div className={Style.movieruntime}>movie time :{movie? movie.runtime +"min":""}</div>
-            <div >
-                <img className={Style.movieposter} src={`https://image.tmdb.org/t/p/original${movie? movie.poster_path:""}`}/>
+            <div className={Style.movieinforuntime}>
+                   movie time :{movie? movie.runtime +"min":""}
+                <div>
+                  Rating:{movie ? movie.vote_average : ""}
+                  <div className={Style.movieinfodescription}>
+                    describtion: {movie ? movie.overview.slice(1, 140) + "..." : ""}     
+                  </div>
             </div>
+            
+            
+            
+            </div>
+            <div >
+                <img className={Style.movieinfoposter} src={`https://image.tmdb.org/t/p/original${movie? movie.poster_path:""}`}/>
+            </div>
+
           </div>
       </div>
            

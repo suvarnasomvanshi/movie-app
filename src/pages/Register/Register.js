@@ -25,34 +25,13 @@ const Register = ({ button }) => {
   function handleuserName(e) {
     setUserName(e.target.value);
   }
-  function handleFirstName(e) {
-    setFirstName(e.target.value);
-  }
-  function handleLastName(e) {
-    setLastName(e.target.value);
-  }
-  function handlePassword(e) {
-    setPassword(e.target.value);
-  }
-  function handleConfirmPassword(e) {
-    setConfirmPassword(e.target.value);
-  }
 
   //making one object addData,add all form data inside object,& stord inside localstorage.
   function handleSubmit() {
     const addData = {
       userName,
-      firstName,
-      lastName,
-      password,
-      confirmpassword,
     };
     setSubmit([...submit, addData]);
-    setUserName("");
-    setFirstName("");
-    setLastName("");
-    setPassword("");
-    setConfirmPassword("");
     localStorage.setItem("key", JSON.stringify(submit));
     setOpen(false);
   }
@@ -80,38 +59,6 @@ const Register = ({ button }) => {
               onChange={handleuserName}
               value={userName}
               placeholder="Username*"
-              className={style.dialoginput}
-            />
-          </div>
-          <div>
-            <input
-              onChange={handleFirstName}
-              value={firstName}
-              placeholder="First Name*"
-              className={style.dialoginput}
-            />
-          </div>
-          <div>
-            <input
-              onChange={handleLastName}
-              value={lastName}
-              placeholder="Last Name*"
-              className={style.dialoginput}
-            />
-          </div>
-          <div>
-            <input
-              onChange={handlePassword}
-              value={password}
-              placeholder="Password*"
-              className={style.dialoginput}
-            />
-          </div>
-          <div>
-            <input
-              onChange={handleConfirmPassword}
-              value={confirmpassword}
-              placeholder="Confirm Password*"
               className={style.dialoginput}
             />
           </div>

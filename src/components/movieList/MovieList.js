@@ -5,6 +5,8 @@ import { useParams } from "react-router-dom";
 
 function MovieList() {
   const [movieList, setMovieList] = useState([]);
+
+  //get value  of dynmically created params (type) from url which is after "movies/"
   const { type } = useParams();
 
 
@@ -12,8 +14,9 @@ function MovieList() {
     getData();
   }, [type]);
   
-  //useParam search that type on url 
-  //useParams which gives detail for that specific "type" from url & fetch data for that type .
+
+
+  
 
   const getData = () => {
     fetch(

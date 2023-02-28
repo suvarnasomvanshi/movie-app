@@ -29,7 +29,7 @@ function Home() {
         <span className={Style.in}>
           <input type="text" 
           className={Style.input}
-          onClick={(e)=>setSearch(e.target.value)}
+          onChange={(e)=>setSearch(e.target.value)}
          />
         </span>
       </div>
